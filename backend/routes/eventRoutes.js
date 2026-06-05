@@ -8,16 +8,21 @@ import {
   fshiEvent,
 } from "../controllers/eventController.js";
 
+import {
+  mbrojt,
+  admin
+} from "../middleware/authMiddleware.js";
+
 const router = express.Router();
 
 router.get("/", merrEventet);
 
 router.get("/:id", merrEventin);
 
-router.post("/", krijoEvent);
+router.post("/", mbrojt, admin, krijoEvent);
 
-router.put("/:id", perditesoEvent);
+router.put("/:id", mbrojt, admin, perditesoEvent);
 
-router.delete("/:id", fshiEvent);
+router.delete("/:id", mbrojt, admin, fshiEvent);
 
 export default router;

@@ -1,3 +1,4 @@
+import bookingRoutes from "./routes/bookingRoutes.js";
 import express from "express";
 import dotenv from "dotenv";
 import cors from "cors";
@@ -20,6 +21,7 @@ app.use(express.json());
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/evente", eventRoutes);
+app.use("/api/rezervime", bookingRoutes);
 
 app.get("/", (req, res) => {
   res.send("API e Platformës së Eventeve po funksionon");
