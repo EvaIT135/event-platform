@@ -6,12 +6,11 @@ function EventCard({ event }) {
       <img src={event.foto} alt={event.titulli} />
 
       <h3>{event.titulli}</h3>
-
+      <p>{event.pershkrimi}</p>
       <p>{event.vendndodhja}</p>
+      <p>{event.cmimi} €</p>
 
-      <p>{event.kategoria}</p>
-
-      <Link to={`/event/${event._id}`}>
+      <Link className="btn" to={`/event/${event._id}`}>
         Shiko Detajet
       </Link>
     </div>

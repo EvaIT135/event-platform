@@ -9,6 +9,7 @@ import Events from "./pages/Events";
 import EventDetails from "./pages/EventDetails";
 import MyBookings from "./pages/MyBookings";
 import AdminDashboard from "./pages/AdminDashboard";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/rezervimet" element={<MyBookings />} />
         <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 }
